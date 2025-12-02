@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "favorites/index"
   # ホーム
   root "pages#home"
 

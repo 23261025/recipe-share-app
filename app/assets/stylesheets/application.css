@@ -8,3 +8,26 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ /* app/assets/stylesheets/application.css */
+
+/* ページ全体の背景とフォント */
+body {
+  background-color: #FFFDF2; /* 薄いクリーム色 */
+  font-family: "Arial Rounded MT Bold", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", sans-serif;
+  color: #333;
+  margin: 0;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* ヘッダー */
+.header {
+  background-color: #82a87c; /* 緑 */
+  color: white;
+  padding: 20px 0;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

@@ -1,4 +1,15 @@
-<div class="container mt-4">
-  <h1>お気に入りレシピ</h1>
-  <p>ブックマークしたレシピを一覧表示する予定です。</p>
+<div class="header">Favorites</div>
+
+<div class="favorite-container">
+  <% (@favorites || []).each do |favorite| %>
+    <div class="card">
+      <div class="photo"></div>
+      <p><%= favorite.name %></p>
+      <span class="heart">♥</span>
+    </div>
+  <% end %>
+</div>
+
+<div class="back-btn-container">
+  <button class="back-btn" onclick="window.history.back();">BACK</button>
 </div>

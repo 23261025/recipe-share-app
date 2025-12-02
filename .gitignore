@@ -33,3 +33,12 @@
 # Ignore key files for decrypting credentials and more.
 /config/*.key
 
+Downloading
+Installed
+Installing
+configure
+curl
+make
+recipe-share-app/
+app/views/templates/
+config/environments/favorites_controller.rb
