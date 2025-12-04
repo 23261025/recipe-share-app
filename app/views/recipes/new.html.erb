@@ -1,4 +1,47 @@
-<div class="container mt-4">
-  <h1>レシピ投稿</h1>
-  <p>ここにレシピの投稿フォーム（画像・タイトル・材料・手順）を作成する予定です。</p>
-</div>
+<div class="header">My Recipe</div>
+
+
+<%= form_with model: @recipe, local: true, html: { class: 'recipe-form' } do |form| %>
+  <div class="recipe-container">
+    
+    <!-- 左側：レシピ名、ユーザー名、パスワード -->
+    <div class="left-column">
+      <%= form.label :title, "レシピ名:" %>
+      <%= form.text_field :title, class: "form-control" %>
+
+      <div class="user-info">
+        <%= form.label :name, "名前:" %>
+        <%= form.text_field :name, class: "form-control", placeholder: "名前" %>
+      </div>
+
+      <div class="user-info">
+        <%= form.label :password, "パスワード:" %>
+        <%= form.password_field :password, class: "form-control", placeholder: "パスワード" %>
+      </div>
+
+      <div class="user-info">
+        <%= form.label :password_confirmation, "パスワード確認:" %>
+        <%= form.password_field :password_confirmation, class: "form-control", placeholder: "パスワード確認" %>
+      </div>
+
+      <!-- 画像アップロード -->
+      <%= form.label :image, "写真:" %>
+      <%= form.file_field :image, class: "file-upload" %>
+    </div>
+    
+    <!-- 右側：材料、作り方 -->
+    <div class="right-column">
+      <%= form.label :ingredients, "材料:" %>
+      <%= form.text_area :ingredients, class: "form-control" %>
+
+      <%= form.label :steps, "作り方:" %>
+      <%= form.text_area :steps, class: "form-control" %>
+    </div>
+
+    <!-- フォームの送信 -->
+    <div class="buttons">
+      <%= link_to "BACK", recipes_path, class: "btn btn-back" %>
+      <%= form.submit "ENTRY", class: "btn btn-entry" %>
+    </div>
+  </div>
+<% end %>

@@ -7,9 +7,14 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <!-- 共通CSS -->
+  <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+
+  <!-- ページ専用CSS（任意） -->
+  <%= yield :page_css %>
 </head>
 <body>
   <%= yield %>
 </body>
 </html>
+

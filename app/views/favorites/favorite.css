@@ -1,0 +1,73 @@
+/* favoriteページ専用スタイル */
+.favorite-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 40px 20px;
+  justify-items: center;
+  background-color: #FFFDF2; /* 背景は薄いクリーム色 */
+  flex-grow: 1;
+  font-family: "Arial Rounded MT Bold", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", sans-serif;
+}
+
+/* ポラロイド風カード */
+.card {
+  width: 150px;
+  background: white;
+  padding-bottom: 10px;
+  border-radius: 16px; /* ぷにぷに感 */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  color: black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* 写真部分 */
+.photo {
+  width: 100%;
+  height: 150px;
+  background-color: black;
+  margin-bottom: 10px;
+}
+
+/* ハート */
+.heart {
+  font-size: 20px;
+  color: #ff7da8;
+  cursor: pointer;
+}
+
+/* BACK ボタン */
+.back-btn-container {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.back-btn {
+  background-color: #82a87c; /* 緑ヘッダーと統一 */
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #6e8d69; /* 濃い緑 */
+}
+
+/* ヘッダー */
+.header {
+  background-color: #82a87c; /* 緑 */
+  color: white;
+  padding: 20px 0;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

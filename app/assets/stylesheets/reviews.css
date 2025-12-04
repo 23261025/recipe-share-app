@@ -1,0 +1,82 @@
+/* レビュー登録ページ専用（ぷにぷに感デザイン） */
+.reviews-container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 24px;
+  border-radius: 16px; /* 角丸 */
+  background-color: #fff; /* 白背景 */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* ぷにぷに影 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  font-family: "Arial Rounded MT Bold", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", sans-serif;
+}
+
+.reviews-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-container h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #82a87c;
+  margin-bottom: 25px;
+}
+
+.reviews-container .form-group {
+  margin-bottom: 18px;
+}
+
+.reviews-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #555;
+}
+
+.reviews-container .form-control {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px; /* 入力欄も丸く */
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.reviews-container .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.reviews-container .btn-primary {
+  background-color: #82a87c;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.reviews-container .btn-primary:hover {
+  background-color: #6e8d69;
+  transform: scale(1.05);
+}
+
+.reviews-container .btn-secondary {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.reviews-container .btn-secondary:hover {
+  background-color: #999;
+  transform: scale(1.05);
+}

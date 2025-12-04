@@ -1,0 +1,89 @@
+/* レシピフォーム全体 */
+.recipe-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 16px;
+  background-color: #FFFDF2;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 左側のカラム */
+.left-column {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.left-column .form-control {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.left-column .file-upload {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+/* 右側のカラム */
+.right-column {
+  width: 50%;
+  padding-left: 20px;
+}
+
+.right-column .form-control {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* ボタン */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-back {
+  background-color: #ccc;
+  color: #333;
+}
+
+.btn-entry {
+  background-color: #82a87c;
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-entry:hover {
+  background-color: #6e8d69;
+}
+
+/* 画像のポラロイド風デザイン */
+.left-column .file-upload {
+  width: 100%;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 20px;
+}
