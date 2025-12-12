@@ -1,5 +1,53 @@
-<div class="header">Serch</div>
+<% content_for :page_css do %>
+  <%= stylesheet_link_tag "search", "data-turbo-track": "reload" %>
+<% end %>
+
+
+<div class="header">Search</div>
 <div class="container mt-4">
-  <h1>レシピ検索</h1>
-  <p>タイトル・材料・タグなどでレシピを検索できるようにする予定です。</p>
+
+  <!-- 検索バー -->
+  <div class="search-box">
+    <input type="text" placeholder="キーワードで検索">
+    <button>🔍</button>
+  </div>
+
+<div class="categories">
+
+  <%= link_to recipes_path(category: "gohan") do %>
+    <%= image_tag "gohan.png", alt: "ごはんもの", class: "category-btn", width: 500 %>
+  <% end %>
+
+  <%= link_to recipes_path(category: "yasai") do %>
+    <%= image_tag "yasai.png", alt: "野菜", class: "category-btn", width: 500 %>
+  <% end %>
+
+  <%= link_to recipes_path(category: "niku") do %>
+    <%= image_tag "niku.png", alt: "お肉", class: "category-btn", width: 500 %>
+  <% end %>
+
+  <%= link_to recipes_path(category: "tamago") do %>
+    <%= image_tag "tamago.png", alt: "たまご", class: "category-btn", width: 500 %>
+  <% end %>
+
+  <%= link_to recipes_path(category: "sakana") do %>
+    <%= image_tag "sakana.png", alt: "魚", class: "category-btn", width: 500 %>
+  <% end %>
+
+  <%= link_to recipes_path(category: "men") do %>
+    <%= image_tag "men.png", alt: "麺", class: "category-btn", width: 500 %>
+  <% end %>
+
+  <%= link_to recipes_path(category: "pan") do %>
+    <%= image_tag "pan.png", alt: "パン", class: "category-btn", width: 500 %>
+  <% end %>
+
+  <%= link_to recipes_path(category: "soup") do %>
+    <%= image_tag "soup.png", alt: "スープ", class: "category-btn", width: 500 %>
+  <% end %>
+
+  <%= link_to recipes_path(category: "desert") do %>
+    <%= image_tag "okashi.png", alt: "お菓子", class: "category-btn", width: 500 %>
+  <% end %>
+
 </div>

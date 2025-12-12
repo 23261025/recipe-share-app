@@ -1,0 +1,66 @@
+/* 検索バー */
+.search-box {
+  margin: 60px auto;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.search-box input {
+  width: 260px;
+  height: 36px;
+  border-radius: 18px;
+  border: 1px solid #ccc;
+  padding-left: 12px;
+  outline: none;
+}
+
+.search-box button {
+  height: 36px;
+  width: 40px;
+  border-radius: 18px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 横に3列 */
+  gap: 16px;                               /* 列と行の間隔 */
+  justify-items: center;                   /* 中央寄せ */
+  margin: 30px auto;
+  max-width: 600px;                        /* 全体幅を広めに */
+}
+
+.categories a {
+  display: inline-flex; /* 画像サイズにぴったり */
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.category-btn {
+  width: 200px;   /* 画像の横幅をお好みで調整 */
+  height: auto;   /* 縦横比を維持 */
+  border-radius: 16px;
+  transition: 0.2s;
+}
+
+.category-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .categories {
+    grid-template-columns: repeat(2, 1fr); /* タブレットなどは2列 */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .categories {
+    grid-template-columns: 1fr; /* スマホは1列 */
+  }
+}
