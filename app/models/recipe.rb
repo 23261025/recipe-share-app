@@ -3,5 +3,3 @@ class Recipe < ApplicationRecord
 
   # その他の設定（バリデーションやメソッドなど）
 end
-
-
