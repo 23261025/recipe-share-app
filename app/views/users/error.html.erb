@@ -1,0 +1,15 @@
+<div class="header">User Registration Error</div>
+
+<div class="users-container">
+  <h2>ユーザー登録ができませんでした...</h2>
+    <% if @user.errors.any? %>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>Please check your input and try again.</p>
+  <% end %>
+  <%= link_to "ホームに戻る", root_path, class: "back-btn" %>
+</div>

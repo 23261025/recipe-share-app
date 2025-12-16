@@ -8,18 +8,29 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to user_complete_path
     else
-      render :new
+      session[:user_params] = user_params
+      redirect_to user_error_path
     end
   end
 
+  def complete
+  end
+
+  def error
+    @user = User.new(session[:user_params])
+  end
 
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation, :age, :favorite_food)
-  end
-
-  def complete
+    params.require(:user).permit(
+      :name,
+      :age,
+      :favorite_food,
+      :email,
+      :password,
+      :password_confirmation
+    )
   end
 
 end

@@ -28,6 +28,13 @@
       <%= form.label :image, "写真:" %>
       <%= form.file_field :image, class: "file-upload" %>
     </div>
+ 
+    <!--カテゴリ選択-->
+    <div class="form-group">
+      <%= form.label :category, "Category" %>
+      <%= form.select :category, options_for_select(["gohan", "yasai", "niku", "tamago", "sakana", "men", "pan", "soup", "desert"], @recipe.category), {}, class: "form-control" %>
+    </div>
+
     
     <!-- 右側：材料、作り方 -->
     <div class="right-column">
