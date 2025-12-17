@@ -1,18 +1,22 @@
 require "test_helper"
 
 class RecipesControllerTest < ActionDispatch::IntegrationTest
+  setup do
+    @recipe = recipes(:one)  # fixtures がある場合
+  end
+
   test "should get index" do
-    get recipes_index_url
+    get recipes_path
     assert_response :success
   end
 
   test "should get show" do
-    get recipes_show_url
+    get recipe_path(@recipe)
     assert_response :success
   end
 
   test "should get new" do
-    get recipes_new_url
+    get new_recipe_path
     assert_response :success
   end
 end

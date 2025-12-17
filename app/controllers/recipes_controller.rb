@@ -32,7 +32,7 @@ class RecipesController < ApplicationController
   end
 
   def sakana
-    @recipes = Recipe.where(category: "saakna")
+    @recipes = Recipe.where(category: "sakana")
   end
 
   def men
